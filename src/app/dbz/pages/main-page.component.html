@@ -1,0 +1,11 @@
+<h1 class="text-2xl font-bold">DBZ Personajes</h1>
+<hr>
+
+<div class="flex">
+  <div class="w-1/2 p-2">
+    <app-dbz-list [characterList]="characters" (onDeleteCharacter)="onDeleteCharacter($event)"></app-dbz-list>
+  </div>
+  <div class="w-1/2 p-2">
+    <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+  </div>
+</div>

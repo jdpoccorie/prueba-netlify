@@ -1,27 +1,47 @@
 # Bases
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+* .editorconfig : Configuracion del editor
+* .gitignore : cuando nosotros hagamos un git commit este archivo se encargara de omitir algunos archivos como node_modules
+* .angular.json : normalamente no se modifica este archivo y si se hace, se hace raras veces y luego te olvidas del archivo
+* .package.json : son los modulos del node.js, podemos crear scripts ademas
+* .tsconfig : se encarga de uniformizar las buenas practicas en el desarrollo de angular
 
-## Development server
+Todos esos archivos de la raíz casi nunca los tocaremos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+.angular
+archivo que no tocaremos
 
-## Code scaffolding
+.vscode
+no daremos mantenimiento, a veces podremos usar extensions para indicar que extensiones podria instalar
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+node_modules
+incluye nuestros paquetes
 
-## Build
+src
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+main.ts
+se modificara cuando trabajemos con otro archivo, como por ejemplo 
+electron, 
+platformdynamic
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+app/
+```ts
+import { Component } from '@angular/core';
 
-## Running end-to-end tests
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'bases';
+}
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+.app.module.ts
 
-## Further help
+Este es el modulo principal, es muy delicado, este puede crecer muy rápido y ya mas adelante se vera como mejorar esto.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
